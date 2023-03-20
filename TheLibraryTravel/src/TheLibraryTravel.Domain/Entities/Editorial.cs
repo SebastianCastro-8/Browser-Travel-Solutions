@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TheLibraryTravel.Domain.Entities
 {
-    internal class Editorial
+    public class Editorial
     {
+        public int Id { get; protected set; }
+        public string Nombre { get; protected set; }
+        public string Sede { get; protected set; }
     }
 }

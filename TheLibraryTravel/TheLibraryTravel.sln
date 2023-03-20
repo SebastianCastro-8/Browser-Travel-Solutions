@@ -9,19 +9,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Test", "2. Test", "{86BB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Port", "3. Port", "{345B08F3-070C-4487-B56A-6FC4075008D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.HostedApp.WebApi", "src\TheLibraryTravel.HostedApp.WebApi\TheLibraryTravel.HostedApp.WebApi.csproj", "{CF4A9BA5-9977-4943-A150-0BCA66FF6674}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLibraryTravel.HostedApp.WebApi", "src\TheLibraryTravel.HostedApp.WebApi\TheLibraryTravel.HostedApp.WebApi.csproj", "{CF4A9BA5-9977-4943-A150-0BCA66FF6674}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.Aplication", "src\TheLibraryTravel.Aplication\TheLibraryTravel.Aplication.csproj", "{12C38660-C25A-491D-9EB6-7611C5445C2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLibraryTravel.Aplication", "src\TheLibraryTravel.Aplication\TheLibraryTravel.Aplication.csproj", "{12C38660-C25A-491D-9EB6-7611C5445C2E}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2BB6785E-A61B-46DD-BC58-F216D079605B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.Dtos", "src\TheLibraryTravel.Dtos\TheLibraryTravel.Dtos.csproj", "{2AA57B70-F4DD-46B9-85DF-0A419A4F28CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLibraryTravel.Dtos", "src\TheLibraryTravel.Dtos\TheLibraryTravel.Dtos.csproj", "{2AA57B70-F4DD-46B9-85DF-0A419A4F28CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.Domain", "src\TheLibraryTravel.Domain\TheLibraryTravel.Domain.csproj", "{2059E3D0-BE76-43AC-8522-CA42D9F19F64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLibraryTravel.Domain", "src\TheLibraryTravel.Domain\TheLibraryTravel.Domain.csproj", "{2059E3D0-BE76-43AC-8522-CA42D9F19F64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.ObjectMapper.Automapper", "src\TheLibraryTravel.ObjectMapper.Automapper\TheLibraryTravel.ObjectMapper.Automapper.csproj", "{9BB9B819-FFC7-479C-BF5B-DA13F1BF7122}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLibraryTravel.ObjectMapper.Automapper", "src\TheLibraryTravel.ObjectMapper.Automapper\TheLibraryTravel.ObjectMapper.Automapper.csproj", "{9BB9B819-FFC7-479C-BF5B-DA13F1BF7122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.WebApi", "TheLibraryTravel.WebApi\TheLibraryTravel.WebApi.csproj", "{21ECA5E2-0F2E-4780-BCCD-1C4B3B2569CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.WebApi", "src\TheLibraryTravel.WebApi\TheLibraryTravel.WebApi.csproj", "{47B488B7-670F-448A-89B1-30570275850F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Core", "4. Core", "{EFA6C550-3EC9-4F8F-AD06-9195A245AABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DataBase", "src\Core.DataBase\Core.DataBase.csproj", "{1647BF94-1A2D-4424-ABEE-E937AE6C7097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +57,14 @@ Global
 		{9BB9B819-FFC7-479C-BF5B-DA13F1BF7122}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BB9B819-FFC7-479C-BF5B-DA13F1BF7122}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BB9B819-FFC7-479C-BF5B-DA13F1BF7122}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21ECA5E2-0F2E-4780-BCCD-1C4B3B2569CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21ECA5E2-0F2E-4780-BCCD-1C4B3B2569CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21ECA5E2-0F2E-4780-BCCD-1C4B3B2569CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21ECA5E2-0F2E-4780-BCCD-1C4B3B2569CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47B488B7-670F-448A-89B1-30570275850F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B488B7-670F-448A-89B1-30570275850F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B488B7-670F-448A-89B1-30570275850F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B488B7-670F-448A-89B1-30570275850F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1647BF94-1A2D-4424-ABEE-E937AE6C7097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1647BF94-1A2D-4424-ABEE-E937AE6C7097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1647BF94-1A2D-4424-ABEE-E937AE6C7097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1647BF94-1A2D-4424-ABEE-E937AE6C7097}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,7 +75,8 @@ Global
 		{2AA57B70-F4DD-46B9-85DF-0A419A4F28CA} = {D60D5BD7-8D3B-4331-8747-D77B0889B046}
 		{2059E3D0-BE76-43AC-8522-CA42D9F19F64} = {D60D5BD7-8D3B-4331-8747-D77B0889B046}
 		{9BB9B819-FFC7-479C-BF5B-DA13F1BF7122} = {D60D5BD7-8D3B-4331-8747-D77B0889B046}
-		{21ECA5E2-0F2E-4780-BCCD-1C4B3B2569CC} = {D60D5BD7-8D3B-4331-8747-D77B0889B046}
+		{47B488B7-670F-448A-89B1-30570275850F} = {D60D5BD7-8D3B-4331-8747-D77B0889B046}
+		{1647BF94-1A2D-4424-ABEE-E937AE6C7097} = {EFA6C550-3EC9-4F8F-AD06-9195A245AABE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94522564-11F5-4DA2-9E84-9D3596D864A9}

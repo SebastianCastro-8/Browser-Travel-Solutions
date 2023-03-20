@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TheLibraryTravel.Domain.Entities
 {
-    internal class Autor
+    public class Autor
     {
+        public int Id { get; protected set; }
+        public string Nombre { get; protected set; }
+        public string Apellido { get; protected set; }
     }
 }

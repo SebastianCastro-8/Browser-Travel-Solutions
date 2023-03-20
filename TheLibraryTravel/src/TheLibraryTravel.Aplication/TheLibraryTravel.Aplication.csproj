@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core.DataBase\Core.DataBase.csproj" />
+    <ProjectReference Include="..\TheLibraryTravel.Dtos\TheLibraryTravel.Dtos.csproj" />
+  </ItemGroup>
+
 </Project>
