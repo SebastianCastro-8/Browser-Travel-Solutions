@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  thelibrarytravel.hostedapp.webapi:
+    image: ${DOCKER_REGISTRY-}thelibrarytravelhostedappwebapi
+    build:
+      context: .
+      dockerfile: src/TheLibraryTravel.HostedApp.WebApi/Dockerfile
