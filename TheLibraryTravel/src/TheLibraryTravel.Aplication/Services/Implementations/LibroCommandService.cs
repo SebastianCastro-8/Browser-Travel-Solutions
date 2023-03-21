@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using TheLibraryTravel.Aplication.Services.Interfaces;
 using TheLibraryTravel.Domain.Entities;
+using TheLibraryTravel.Domain.Services.Implementations;
+using TheLibraryTravel.Domain.Services.Interfaces;
 using TheLibraryTravel.Dtos;
 
 namespace TheLibraryTravel.Aplication.Services.Implementations
@@ -17,27 +19,23 @@ namespace TheLibraryTravel.Aplication.Services.Implementations
     {
         private readonly AplicationDbContext Context;
         private readonly IMapper Mapper;
+        private readonly ILibroService LibroService;
 
 
 
-        public LibroCommandService(AplicationDbContext context, IMapper mapper)
+        public LibroCommandService(AplicationDbContext context, IMapper mapper, ILibroService libroService)
         {
             Context = context;
             Mapper = mapper;
+            LibroService = libroService;
         }
         public async Task<LibroDto> ActualizarLibro(int id, LibroDto dto)
         {
-            if (dto == null)
-            {
-                throw new ArgumentNullException(nameof(dto));
-            }
+
 
             var libro = await Context.libros.FindAsync(id);
 
-            if (libro == null)
-            {
-                throw new Exception($"No se encontró el libro con ID {id}");
-            }
+            libro = LibroService.ActualizarLibro(libro, dto);
 
 
             Context.Update(libro);

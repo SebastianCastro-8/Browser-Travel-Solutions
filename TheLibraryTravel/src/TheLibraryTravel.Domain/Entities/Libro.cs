@@ -29,5 +29,17 @@ namespace TheLibraryTravel.Domain.Entities
             Paginas = dto.Paginas;
             IdEditorial = dto.IdEditorial;
         }
+
+
+        internal Libro ActualizarLibro(LibroDto dto)
+        {
+            Isbn = dto.Isbn;
+            Titulo = dto.Titulo;
+            Sinopsis = dto.sinopsis;
+            Paginas = dto.Paginas;
+            IdEditorial = dto.IdEditorial;
+
+            return this;
+        }
     }
 }
