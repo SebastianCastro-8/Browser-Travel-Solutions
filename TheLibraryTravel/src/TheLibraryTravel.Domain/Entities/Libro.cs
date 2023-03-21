@@ -31,7 +31,7 @@ namespace TheLibraryTravel.Domain.Entities
         }
 
 
-        internal Libro ActualizarLibro(LibroDto dto)
+        public Libro ActualizarLibro(LibroDto dto)
         {
             Isbn = dto.Isbn;
             Titulo = dto.Titulo;

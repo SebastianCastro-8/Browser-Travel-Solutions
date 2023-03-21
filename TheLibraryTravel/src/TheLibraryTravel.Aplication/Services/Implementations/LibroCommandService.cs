@@ -1,15 +1,9 @@
 ﻿using AutoMapper;
-using AutoMapper.Internal.Mappers;
 using Core.DataBase;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using TheLibraryTravel.Aplication.Services.Interfaces;
 using TheLibraryTravel.Domain.Entities;
-using TheLibraryTravel.Domain.Services.Implementations;
 using TheLibraryTravel.Domain.Services.Interfaces;
 using TheLibraryTravel.Dtos;
 
@@ -31,11 +25,11 @@ namespace TheLibraryTravel.Aplication.Services.Implementations
         }
         public async Task<LibroDto> ActualizarLibro(int id, LibroDto dto)
         {
-           var libro = await Context.libros.FindAsync(id);
-           libro = LibroService.ActualizarLibro(libro, dto);
-           Context.Update(libro);
-           await Context.SaveChangesAsync();
-           return Mapper.Map<LibroDto>(libro);
+            var libro = await Context.libros.FindAsync(id);
+            libro = LibroService.ActualizarLibro(libro, dto);
+            Context.Update(libro);
+            await Context.SaveChangesAsync();
+            return Mapper.Map<LibroDto>(libro);
         }
 
 
