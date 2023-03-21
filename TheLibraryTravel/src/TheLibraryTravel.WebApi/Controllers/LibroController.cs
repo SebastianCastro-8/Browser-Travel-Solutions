@@ -37,7 +37,7 @@ namespace TheLibraryTravel.WebApi.Controllers
         [Route("ObtenerLibro/{id}")]
         [HttpGet]
 
-        public async Task<ActionResult<LibroDto>> Get(int id)
+        public async Task<LibroDto> Get(int id)
         {
             return await QueryService.ObtenerLibro(id);
         }
@@ -52,28 +52,31 @@ namespace TheLibraryTravel.WebApi.Controllers
 
         [Route("ActualizarLibro/{id}")]
         [HttpPut]
-        public async Task<ActionResult<LibroDto>> Put(int id, LibroDto dto)
+        public async Task<LibroDto> Put(int id, LibroDto dto)
         {
-
-            var libroDto = await CommandService.ActualizarLibro(id, dto);
-
-            if (libroDto == null)
+            if (dto == null)
             {
-                return NotFound();
+                throw new ArgumentNullException(nameof(dto), "El objeto libro es nulo");
             }
 
-            return Ok(libroDto);
+            var libroDto = await CommandService.ActualizarLibro(id, dto);
+            if (libroDto == null)
+            {
+                throw new InvalidOperationException($"No se pudo actualizar el libro con ID {id}");
+            }
+
+            return libroDto;
         }
 
         [Route("EliminarLibro/{id}")]
         [HttpDelete]
-        public async Task<ActionResult<LibroDto>> Delete(int id)
+        public async Task<LibroDto> Delete(int id)
         {
             var libroDto = await CommandService.EliminarLibro(id);
 
             if (libroDto == null)
             {
-                return NotFound();
+                throw new InvalidOperationException($"No se pudo eliminar el libro con ID {id}");
             }
 
             return libroDto;
