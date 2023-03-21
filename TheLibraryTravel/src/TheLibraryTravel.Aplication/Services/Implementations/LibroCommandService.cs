@@ -31,17 +31,11 @@ namespace TheLibraryTravel.Aplication.Services.Implementations
         }
         public async Task<LibroDto> ActualizarLibro(int id, LibroDto dto)
         {
-
-
-            var libro = await Context.libros.FindAsync(id);
-
-            libro = LibroService.ActualizarLibro(libro, dto);
-
-
-            Context.Update(libro);
-            await Context.SaveChangesAsync();
-
-            return Mapper.Map<LibroDto>(libro);
+           var libro = await Context.libros.FindAsync(id);
+           libro = LibroService.ActualizarLibro(libro, dto);
+           Context.Update(libro);
+           await Context.SaveChangesAsync();
+           return Mapper.Map<LibroDto>(libro);
         }
 
 
