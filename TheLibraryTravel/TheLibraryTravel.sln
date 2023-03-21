@@ -21,11 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLibraryTravel.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLibraryTravel.ObjectMapper.Automapper", "src\TheLibraryTravel.ObjectMapper.Automapper\TheLibraryTravel.ObjectMapper.Automapper.csproj", "{9BB9B819-FFC7-479C-BF5B-DA13F1BF7122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.WebApi", "src\TheLibraryTravel.WebApi\TheLibraryTravel.WebApi.csproj", "{47B488B7-670F-448A-89B1-30570275850F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLibraryTravel.WebApi", "src\TheLibraryTravel.WebApi\TheLibraryTravel.WebApi.csproj", "{47B488B7-670F-448A-89B1-30570275850F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Core", "4. Core", "{EFA6C550-3EC9-4F8F-AD06-9195A245AABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DataBase", "src\Core.DataBase\Core.DataBase.csproj", "{1647BF94-1A2D-4424-ABEE-E937AE6C7097}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.DataBase", "src\Core.DataBase\Core.DataBase.csproj", "{1647BF94-1A2D-4424-ABEE-E937AE6C7097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.Aplication.Test", "src\TheLibraryTravel.Aplication.Test\TheLibraryTravel.Aplication.Test.csproj", "{22964E7E-9CA1-4E6C-8ED9-8043B79C777D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.Domain.Test", "src\TheLibraryTravel.Domain.Test\TheLibraryTravel.Domain.Test.csproj", "{A758AFFB-EC59-4456-9F1F-9801DEBEF7DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLibraryTravel.WebApi.Tests", "src\TheLibraryTravel.WebApi.Tests\TheLibraryTravel.WebApi.Tests.csproj", "{59C08E59-23AB-4B3E-9B78-4EB32BF6E160}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +71,18 @@ Global
 		{1647BF94-1A2D-4424-ABEE-E937AE6C7097}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1647BF94-1A2D-4424-ABEE-E937AE6C7097}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1647BF94-1A2D-4424-ABEE-E937AE6C7097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22964E7E-9CA1-4E6C-8ED9-8043B79C777D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22964E7E-9CA1-4E6C-8ED9-8043B79C777D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22964E7E-9CA1-4E6C-8ED9-8043B79C777D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22964E7E-9CA1-4E6C-8ED9-8043B79C777D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A758AFFB-EC59-4456-9F1F-9801DEBEF7DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A758AFFB-EC59-4456-9F1F-9801DEBEF7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A758AFFB-EC59-4456-9F1F-9801DEBEF7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A758AFFB-EC59-4456-9F1F-9801DEBEF7DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C08E59-23AB-4B3E-9B78-4EB32BF6E160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C08E59-23AB-4B3E-9B78-4EB32BF6E160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C08E59-23AB-4B3E-9B78-4EB32BF6E160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C08E59-23AB-4B3E-9B78-4EB32BF6E160}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +95,9 @@ Global
 		{9BB9B819-FFC7-479C-BF5B-DA13F1BF7122} = {D60D5BD7-8D3B-4331-8747-D77B0889B046}
 		{47B488B7-670F-448A-89B1-30570275850F} = {D60D5BD7-8D3B-4331-8747-D77B0889B046}
 		{1647BF94-1A2D-4424-ABEE-E937AE6C7097} = {EFA6C550-3EC9-4F8F-AD06-9195A245AABE}
+		{22964E7E-9CA1-4E6C-8ED9-8043B79C777D} = {86BB6760-3D58-4489-AF56-61820C6FBC4D}
+		{A758AFFB-EC59-4456-9F1F-9801DEBEF7DB} = {86BB6760-3D58-4489-AF56-61820C6FBC4D}
+		{59C08E59-23AB-4B3E-9B78-4EB32BF6E160} = {86BB6760-3D58-4489-AF56-61820C6FBC4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94522564-11F5-4DA2-9E84-9D3596D864A9}
