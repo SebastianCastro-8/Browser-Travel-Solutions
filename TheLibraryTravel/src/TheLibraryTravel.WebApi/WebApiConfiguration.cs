@@ -14,6 +14,9 @@ namespace TheLibraryTravel.WebApi
             services.AddTransient<ILibroCommandService, LibroCommandService>();
             services.AddTransient<ILibroQueryService, LibroQueryService>();
             services.AddTransient<ILibroService, LibroService>();
+            services.AddTransient<IAutorCommandService, AutorCommadService>();
+            services.AddTransient<IAutorQueryService, AutorQueryService>();
+            services.AddTransient<IAutorService, AutorService>();
 
 
             return services;
