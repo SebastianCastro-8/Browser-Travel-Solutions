@@ -8,6 +8,7 @@ namespace TheLibraryTravel.Dtos
 {
     public class LibroDto
     {
+        public int Id { get; set; }
         public int Isbn { get; set; }
         public string Titulo { get; set; }
         public string sinopsis { get; set; }

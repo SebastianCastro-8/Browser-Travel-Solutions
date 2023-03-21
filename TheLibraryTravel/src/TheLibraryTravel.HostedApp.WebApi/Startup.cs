@@ -13,6 +13,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TheLibraryTravel.ObjectMapper.Automapper;
+using TheLibraryTravel.WebApi;
 
 namespace TheLibraryTravel.HostedApp.WebApi
 {
@@ -28,7 +30,9 @@ namespace TheLibraryTravel.HostedApp.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            WebApiConfiguration.ConfigureServices(services);
 
+            services.AddAutoMapper(typeof(TheLibraryTravelSistemaProfile));
             services.AddControllers();
             services.AddDbContext<AplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
             services.AddSwaggerGen(c =>

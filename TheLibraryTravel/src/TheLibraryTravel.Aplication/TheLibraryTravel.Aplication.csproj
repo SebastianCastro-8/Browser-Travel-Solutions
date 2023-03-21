@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Core.DataBase\Core.DataBase.csproj" />
     <ProjectReference Include="..\TheLibraryTravel.Dtos\TheLibraryTravel.Dtos.csproj" />
   </ItemGroup>

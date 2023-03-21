@@ -9,7 +9,7 @@ namespace TheLibraryTravel.Aplication.Services.Interfaces
 {
     public interface ILibroQueryService
     {
-        Task<LibroDto> ObtenerLibros();
+        Task<IList<LibroDto>> ObtenerLibros();
         Task<LibroDto> ObtenerLibro(int id);
     }
 }

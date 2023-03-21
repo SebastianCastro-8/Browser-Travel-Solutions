@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
       <PrivateAssets>all</PrivateAssets>
@@ -20,6 +22,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core.DataBase\Core.DataBase.csproj" />
+    <ProjectReference Include="..\TheLibraryTravel.Aplication\TheLibraryTravel.Aplication.csproj" />
+    <ProjectReference Include="..\TheLibraryTravel.Domain\TheLibraryTravel.Domain.csproj" />
+    <ProjectReference Include="..\TheLibraryTravel.Dtos\TheLibraryTravel.Dtos.csproj" />
+    <ProjectReference Include="..\TheLibraryTravel.ObjectMapper.Automapper\TheLibraryTravel.ObjectMapper.Automapper.csproj" />
     <ProjectReference Include="..\TheLibraryTravel.WebApi\TheLibraryTravel.WebApi.csproj" />
   </ItemGroup>
 

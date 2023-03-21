@@ -9,4 +9,8 @@
     <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TheLibraryTravel.Dtos\TheLibraryTravel.Dtos.csproj" />
+  </ItemGroup>
+
 </Project>

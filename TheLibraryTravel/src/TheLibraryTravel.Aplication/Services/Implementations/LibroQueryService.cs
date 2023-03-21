@@ -1,23 +1,49 @@
-﻿using System;
+﻿using AutoMapper;
+using Core.DataBase;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TheLibraryTravel.Aplication.Services.Interfaces;
+using TheLibraryTravel.Domain.Entities;
 using TheLibraryTravel.Dtos;
 
 namespace TheLibraryTravel.Aplication.Services.Implementations
 {
     public class LibroQueryService : ILibroQueryService
     {
-        public Task<LibroDto> ObtenerLibro(int id)
+
+        private readonly AplicationDbContext Context;
+        private readonly IMapper Mapper;
+
+        public LibroQueryService(AplicationDbContext context, IMapper mapper)
         {
-            throw new NotImplementedException();
+            Context = context;
+            Mapper = mapper;
         }
 
-        public Task<LibroDto> ObtenerLibros()
+
+        public async Task<LibroDto> ObtenerLibro(int id)
         {
-            throw new NotImplementedException();
+            var libro = await Context.libros.FirstOrDefaultAsync(x => x.Id == id);
+            if (libro == null)
+            {
+                throw new ArgumentException($"No se encontró el libro con ID {id}");
+            }
+
+            return Mapper.Map<Libro, LibroDto>(libro);
+        }
+
+
+
+
+        public async Task<IList<LibroDto>> ObtenerLibros()
+        {
+            var libros = await Context.libros.ToListAsync();
+            var librosDto = Mapper.Map<IList<Libro>, IList<LibroDto>>(libros);
+            return librosDto;
         }
     }
 }

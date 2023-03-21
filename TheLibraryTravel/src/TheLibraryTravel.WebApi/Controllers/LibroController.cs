@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using TheLibraryTravel.Aplication.Services.Interfaces;
 using TheLibraryTravel.Dtos;
@@ -20,59 +21,59 @@ namespace TheLibraryTravel.WebApi.Controllers
             QueryService = queryService;
         }
 
-        [HttpPost]
-        public async Task<LibroDto> Post(LibroDto dto)
-        {
-            if (dto == null)
-            {
-                throw new ArgumentNullException(nameof(dto));
-            }
 
-            return await CommandService.CrearLibro(dto);
+        [Route("CrearLibro")]
+        [HttpPost]
+        public async Task<ActionResult<LibroDto>> Post(LibroDto dto)
+        {
+            var libroDto = await CommandService.CrearLibro(dto);
+            return CreatedAtAction(nameof(Get), new { id = libroDto.Id }, libroDto);
         }
 
-        [HttpGet("{id}", Name = "ObtenerLibro")]
+        [Route("ObtenerLibro/{id}")]
+        [HttpGet]
+
         public async Task<ActionResult<LibroDto>> Get(int id)
         {
-            if (id == null)
-            {
-                throw new ArgumentNullException(nameof(id));
-            }
             return await QueryService.ObtenerLibro(id);
         }
-
-        [HttpGet(Name = "ObtenerLibros")]
-        public async Task<ActionResult<LibroDto>> Get()
+        [Route("ObtenerLibros")]
+        [HttpGet]
+        public async Task<IList<LibroDto>> Get()
         {
             return await QueryService.ObtenerLibros();
         }
 
-        [HttpPut("{id}", Name = "ActualizarLibro")]
+
+        [Route("ActualizarLibro/{id}")]
+        [HttpPut]
         public async Task<ActionResult<LibroDto>> Put(int id, LibroDto dto)
         {
-            if (dto == null)
+
+            var libroDto = await CommandService.ActualizarLibro(id, dto);
+
+            if (libroDto == null)
             {
-                throw new ArgumentNullException(nameof(dto));
+                return NotFound();
             }
 
-            if (id == null)
-            {
-                throw new ArgumentNullException(nameof(id));
-            }
-
-            return await CommandService.ActualizarLibro(id, dto);
+            return Ok(libroDto);
         }
 
-        [HttpDelete("{id}", Name = "EliminarLibro")]
+        [Route("EliminarLibro/{id}")]
+        [HttpDelete]
         public async Task<ActionResult<LibroDto>> Delete(int id)
         {
-            if (id == null)
+            var libroDto = await CommandService.EliminarLibro(id);
+
+            if (libroDto == null)
             {
-                throw new ArgumentNullException(nameof(id));
+                return NotFound();
             }
 
-            return await CommandService.EliminarLibro(id);
+            return libroDto;
         }
+
 
 
 

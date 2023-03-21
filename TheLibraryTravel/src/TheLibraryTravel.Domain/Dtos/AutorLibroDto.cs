@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TheLibraryTravel.Domain.Entities;
 
-namespace TheLibraryTravel.Dtos
+namespace TheLibraryTravel.Domain.Dtos
 {
     public class AutorLibroDto
     {
