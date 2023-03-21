@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 using TheLibraryTravel.Aplication.Services.Interfaces;
 using TheLibraryTravel.Dtos;
@@ -9,6 +12,7 @@ namespace TheLibraryTravel.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class LibroController : ControllerBase
     {
         private ILibroCommandService CommandService { get; set; }
